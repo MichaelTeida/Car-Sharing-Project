@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/reset.css">s
+    <link rel="stylesheet" href="css/reset.css">
 </head>
 <body>
     <section class="main-section">
@@ -49,8 +49,8 @@
     </section>
 
     <main>
-        <div class="blog">
-            <div id="blog" class="container blog-content">
+        <div id="blog" class="blog">
+            <div class="container blog-content">
                 <h2 class="section-title">BLOG</h2>
                 <div class="content">
                     <div class="box">
@@ -143,9 +143,9 @@
                     <input type="email" id="email" placeholder="Type your e-mail">
                     <textarea name="textarea">Write something here</textarea>
                     <label class="agreement">
-                        <input type="checkbox" name="agreement">
-                        <span class="agreement-description">
-                            I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)
+                        <input type="checkbox">
+                        <span class="checkbox"></span>
+                        <span class="agreement-description">I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)
                         </span>
                     </label>
                     <div class="form-send">
@@ -157,26 +157,24 @@
     </div>
 
     <footer class="footer">
-        <div class="container">
+        <div class="container footer__container">
             <div class="footer__left-panel">
-                <div class="logo">
-                    <a href="#">
-                        <img src="images/Icon%20Logo%20Normal.svg" alt="Car Sharing logo">
-                        <span class="logo-text">CAR </span>SHARING
-                    </a>
-                </div>
-                <div class="category">
+                <a href="#" class="logo footer__logo">
+                    <img class="logo-icon" src="images/Icon%20Logo%20Normal.svg" alt="Car Sharing logo">
+                    <span class="logo-text">CAR</span> SHARING
+                </a>
+                <div class="footer__category">
                     <ul>
-                        <li>HOME PAGE</li>
-                        <li>ABOUT US</li>
-                        <li>GALLERY</li>
-                        <li>SHARE REGULATION</li>
+                        <li><a href="#">HOME PAGE</a></li>
+                        <li><a href="#">ABOUT US</a></li>
+                        <li><a href="#">GALLERY</a></li>
+                        <li><a href="#">SHARE REGULATION</a></li>
                     </ul>
                     <ul>
-                        <li>PRICE</li>
-                        <li>OUR FLEET</li>
-                        <li>OUR CLIENTS</li>
-                        <li>CONTACT</li>
+                        <li><a href="#">PRICE</a></li>
+                        <li><a href="#">OUR FLEET</a></li>
+                        <li><a href="#">OUR CLIENTS</a></li>
+                        <li><a href="#">CONTACT</a></li>
                     </ul>
                 </div>
             </div>

@@ -119,7 +119,6 @@ body {
     height: calc(100vh - 145px);
     text-align: center;
     flex-direction: column;
-    gap: 50px;
 }
 
 .banner-title {
@@ -131,6 +130,9 @@ body {
 .banner__description {
     font-size: 16px;
     line-height: 22px;
+    font-weight: bold;
+    padding-top: 30px;
+    padding-bottom: 54px;
 }
 
 .buttons {
@@ -205,15 +207,6 @@ body {
     margin-bottom: 35px;
 }
 
-.section-title::before, .section-title::after {
-    content: "";
-    width: 50px;
-    height: 3px;
-    background: var(--element-color);
-    display: inline-block;
-    margin: 11px;
-}
-
 .content {
     display: flex;
     justify-content: center;
@@ -262,12 +255,11 @@ body {
     font-weight: bold;
 }
 
-.service {
+.service, .footer{
     background-color: var(--alternate-background);
 }
 
 .service-content {
-    background-color: var(--alternate-background);
     padding: 60px 0 100px 0;
 }
 
@@ -277,6 +269,17 @@ body {
     text-align: center;
     font-weight: bold;
     margin-bottom: 75px;
+}
+
+.section-title::before, .section-title::after, .section-secondary-title::before, .section-secondary-title::after{
+    content: "";
+    width: 50px;
+    height: 3px;
+    background: var(--element-color);
+    display: inline-block;
+    margin: 11px 10px;
+    border-radius: 8px;
+    box-shadow: 0 1px 6px var(--element-color-shadow);
 }
 
 .box-secondary img {
@@ -364,20 +367,34 @@ body {
 
 .agreement {
     display: flex;
-    align-items: flex-start;
-    gap: 10px;
+    justify-content: space-between;
+    gap: 32px;
 }
 
-label input[type="checkbox"] {
+.agreement > input[type="checkbox"], .checkbox::after  {
+    display: none;
+}
+
+.checkbox::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 22px;
+    height: 22px;
     border: 1px solid var(--form-border);
     border-radius: 8px;
-    content: "daw";
-    width: 2.15em;
-    height: 1.15em;
+}
+
+input:checked ~ .checkbox::before {
+    content: url("../images/Icon Check.svg");
+    font-size: 20px;
+    color: white;
+    text-align: center;
 }
 
 .agreement-description {
     font-size: 10px;
+    line-height: 14px;
 }
 
 .form-send {
@@ -394,4 +411,58 @@ label input[type="checkbox"] {
     color: var(--element-color);
     background-color: var(--main-color);
     font-weight: bold;
+    padding: 0;
+}
+
+.footer__container {
+    padding: 40px 0 39px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__left-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.footer__logo {
+    font-size: 25px;
+}
+
+.footer__logo .logo-icon {
+    width: 16px;
+    height: 19px;
+}
+
+.footer__logo .logo-text {
+    padding: 0 7.55px 0 8px;
+}
+
+.footer__category {
+    display: flex;
+    gap: 141px;
+    line-height: 19px;
+}
+
+.footer__category ul, .footer__category ul li a {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    font-size: 14px;
+    text-decoration: none;
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+.footer__category ul li a:hover {
+    color: var(--element-color);
+}
+
+.footer__right-panel {
+    display: flex;
+    align-items: flex-end;
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--form-border);
 }
